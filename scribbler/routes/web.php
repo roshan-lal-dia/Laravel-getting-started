@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\NotesController;
 use App\Models\Note;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,6 +31,9 @@ Route::middleware(['auth'])->group(function(){
 }
 );
 
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 
