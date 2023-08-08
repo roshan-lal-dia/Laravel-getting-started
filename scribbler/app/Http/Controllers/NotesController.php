@@ -20,7 +20,9 @@ class NotesController extends Controller
      */
     public function create()
     {
-        //
+        //create route
+        $isEdit = false;
+        return view('notes.create-edit');
     }
 
     /**
@@ -62,5 +64,7 @@ class NotesController extends Controller
     public function destroy(Note $note)
     {
         //
+        $note->delete();
+        return redirect(route('home'));
     }
 }
