@@ -23,8 +23,13 @@ Route::get('/', function () {
 
 //Route::get('/notes/{note}', [NotesController::class, 'show']);
 
-Route::resource('notes', NotesController::class);
+//Route::resource('notes', NotesController::class);
 
-Auth::routes();
+Route::middleware(['auth'])->group(function(){
+    Route::resource('notes', NotesController::class);
+}
+);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
