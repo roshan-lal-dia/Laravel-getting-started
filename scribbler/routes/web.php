@@ -21,4 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/notes/{note}', [NotesController::class, 'show']);
+//Route::get('/notes/{note}', [NotesController::class, 'show']);
+
+Route::resource('notes', NotesController::class);
