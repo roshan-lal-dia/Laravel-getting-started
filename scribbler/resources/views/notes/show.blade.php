@@ -16,6 +16,12 @@
         </style>
     </head>
     <body class="antialiased">
-        
+        <div class="ml-4 mt-4">
+        <label for="">Title</label>
+        <h4>{{$note->title}}</h4>
+
+        <label for="">Description</label>
+        <h4>{{$note->description}}</h4>
+        </div>
     </body>
 </html>
