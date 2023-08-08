@@ -26,6 +26,7 @@
                         <form method="POST" action="{{route('notes.destroy', $note->id)}}">
                         @csrf
                         @method('DELETE')
+                        <button type="submit">Delete</button>
                         </form>
                 </div>
             </div>
