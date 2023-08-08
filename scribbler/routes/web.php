@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $note = Note::first();
-    return $note;
-    //return view('welcome');
+    //$note = Note::first();
+    //return $note;
+    return view('welcome');
 });
