@@ -6,6 +6,11 @@
         <div class="col-md-8">
         <table>
             <thead>
+            <tr>
+            <th>Title</th>
+            <th>Created At</th>
+            <th>Actions</th>
+            </tr>
             </thead>
             <tbody>
             </tbody>
