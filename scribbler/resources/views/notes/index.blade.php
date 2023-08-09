@@ -17,6 +17,7 @@
                 <tr>
                     <td>{{$item->title}}</td>
                     <td>{{$item->created_at}}</td>
+                    <td><a href="{{route('notes.show', $item->id)}}">Show</a></td>
                 </tr>
             @endforeach
             </tbody>
