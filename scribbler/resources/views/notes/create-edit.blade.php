@@ -8,7 +8,7 @@
                 <div class="card-header">{{ __('Note') }}</div>
 
                 <div class="card-body">
-                <form action="{{$isEdit ? route('notes.edit', $note->id) : route('notes.create')}}" method="POST">
+                <form action="{{$isEdit ? route('notes.edit', $note->id) : route('notes.store')}}" method="POST">
                 @csrf
                         <div class="row mb-3">
                             <label for="Title" class="col-md-4 col-form-label text-md-end">{{ __('Title') }}</label>
