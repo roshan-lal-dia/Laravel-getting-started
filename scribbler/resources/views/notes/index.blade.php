@@ -13,6 +13,12 @@
             </tr>
             </thead>
             <tbody>
+            @foreach (\App\Model\Note::all() as $item)
+                <tr>
+                    <td>$item->title</td>
+                    <td>$item->created_at</td>
+                </tr>
+            @endforeach
             </tbody>
         </table>
         </div>
