@@ -13,7 +13,7 @@
                             <label for="Title" class="col-md-4 col-form-label text-md-end">{{ __('Title') }}</label>
 
                             <div class="col-md-6">
-                                <input id="title" type="text" class="form-control" name="title" value={{$note->title}} required readonly>
+                                <input id="title" type="text" class="form-control" name="title" value="{{$note->title}}"" required readonly>
                             </div>
                         </div>
                         <div class="row mb-3">
