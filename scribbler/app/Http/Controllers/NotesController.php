@@ -30,6 +30,10 @@ class NotesController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            "title" => "required",
+            "description" => "required"
+        ]);
         //store definition
         $note = new note();
         $note->title = $request->title;
