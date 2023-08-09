@@ -10,6 +10,9 @@
                 <div class="card-body">
                 <form action="{{$isEdit ? route('notes.update', $note->id) : route('notes.store')}}" method="POST">
                 @csrf
+                @if ($isEdit)
+                @method('PUT');  
+                @endif
                         <div class="row mb-3">
                             <label for="Title" class="col-md-4 col-form-label text-md-end">{{ __('Title') }}</label>
 
