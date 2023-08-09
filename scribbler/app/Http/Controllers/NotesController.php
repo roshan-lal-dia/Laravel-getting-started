@@ -67,7 +67,17 @@ class NotesController extends Controller
      */
     public function update(Request $request, Note $note)
     {
-        //
+        //make update working
+        $request->validate([
+            "title" => "required",
+            "description" => "required"
+        ]);
+
+        $note->title = $request->title;
+        $note->description = $request->description;
+        $note->update();
+
+        return redirect(route('notes.show', $note->id));
     }
 
     /**
