@@ -20,6 +20,11 @@
                     <td>
                     <a href="{{route('notes.show', $item->id)}}">Show</a>
                     <a href="{{route('notes.edit', $item->id)}}">Edit</a>
+                    <form method="POST" action="{{route('notes.destroy', $item->id)}}">
+                    @csrf
+                    @method('DELETE')
+                        <button>Delete</button>
+                    </form>
                     </td>
                 </tr>
             @endforeach
