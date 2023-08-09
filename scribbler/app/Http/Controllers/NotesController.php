@@ -30,7 +30,8 @@ class NotesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //store definition
+        dd($request);
     }
 
     /**
