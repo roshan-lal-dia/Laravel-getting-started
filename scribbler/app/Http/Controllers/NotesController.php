@@ -13,7 +13,7 @@ class NotesController extends Controller
     public function index()
     {
         //show notes
-        
+        return view('notes.index');
     }
 
     /**
