@@ -22,7 +22,7 @@ class NotesController extends Controller
     {
         //create route
         $isEdit = false;
-        return view('notes.create-edit');
+        return view('notes.create-edit', compact(['isEdit']));
     }
 
     /**
