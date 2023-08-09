@@ -58,6 +58,8 @@ class NotesController extends Controller
     public function edit(Note $note)
     {
         //
+        $isEdit = true;
+        return view('notes.create-edit', compact(['isEdit', 'note']));
     }
 
     /**
