@@ -8,6 +8,11 @@
                 <div class="card-header">{{ __('Note') }}</div>
 
                 <div class="card-body">
+                <div>
+                    @if ($errors -> any())
+                        Error!
+                    @endif
+                </div>
                 <form action="{{$isEdit ? route('notes.update', $note->id) : route('notes.store')}}" method="POST">
                 @csrf
                 @if ($isEdit)
