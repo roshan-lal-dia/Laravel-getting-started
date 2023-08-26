@@ -9,8 +9,10 @@
 
                 <div class="card-body">
                 <div>
-                    @if ($errors -> any())
-                        Error!
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $e)
+                            {{$e}}
+                        @endforeach
                     @endif
                 </div>
                 <form action="{{$isEdit ? route('notes.update', $note->id) : route('notes.store')}}" method="POST">
